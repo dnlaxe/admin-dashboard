@@ -214,6 +214,9 @@ button {
   border-style: none;
   font-size: 20px;
   font-weight: 600;
+}
+
+button:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -264,6 +267,10 @@ li {
   font-size: 25px;
   margin: 15px 0;
   font-weight: 600;
+}
+
+li:hover {
+  font-weight: 900;
 }
 
 .dashboard {
