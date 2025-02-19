@@ -49,45 +49,45 @@
 body {
     font-family: "IBM Plex Sans", serif;
     display: grid;
-    grid-template-columns: 350px 1fr;
-    grid-template-rows: 240px 1fr;
+    grid-template-columns: 275px 1fr;
+    grid-template-rows: 175px 1fr;
     grid-template-areas:
         "sidebar header"
         "sidebar main";
     height: 100vh;
-    zoom:0.9;
 }
 
 .sidebar {
     grid-area: sidebar;
     background-color: #1d6d88;
     color: white;
-    border-radius: 0 50px 50px 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    border-radius: 0 25px 25px 0;
 }
 
 .header {
     grid-area: header;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     border-bottom: solid;
     border-color: #1d6d88;
     border-width: 2px;
-    border-radius: 0 0 50px 50px;
+    padding-top: 10px;
+    border-radius: 0 0 25px 25px;
 }
 
 .main {
     grid-area: main;
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 275px;
     grid-template-areas:
         "main-content right-sidebar";
 }
 
 .main-content {
   grid-area: main-content;
-  padding: 20px 30px 30px;
+  padding: 20px;
 }
 
 .right-sidebar {
@@ -97,8 +97,8 @@ body {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
 }
 
 ul {
@@ -107,67 +107,63 @@ ul {
 }
 
 .card {
-    min-height: 300px;
+    min-height: 200px;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 16px 1fr;
+    grid-template-columns: 10px 1fr;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .side-card-announcements {
-    width: 340px;
-    height: 400px;
+    width: 250px;
+    height: 300px;
     border-radius: 10px;
-    padding: 20px 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: grid;
 }
 
 .side-card-trending {
-  width: 340px;
-  height: 400px;
+  width: 250px;
+  height: 300px;
   border-radius: 10px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 30px;
 }
 
 .header-top {
   display: grid;
-  grid-template-columns: minmax(530px,1fr) 450px;
+  grid-template-columns: minmax(530px,1fr) 250px;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 30px;
+  margin-right: 50px;
 }
 
 .header-bottom {
   display: grid;
-  grid-template-columns: 1fr 500px;
+  grid-template-columns: 1fr 325px;
   align-items: center;
-  padding-left: 50px;
-  padding-bottom: 25px;
+  padding-left: 40px;
   padding-right: 30px;
 }
 
 .header-icons {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
-  place-items: center;
-  font-size: 20px;
-  margin-right: 50px;
+  font-size: 14px;
+  justify-items: center;
+  align-items: center;
 }
 
 .user-info {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 70px 1fr;
   align-items: center;
 }
 
 .user-info h2 {
-  margin-left: 30px;
-}
-
-.side-card-content-announcement {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  margin-left: 20px;
 }
 
 .side-card-content-trending {
@@ -177,14 +173,21 @@ ul {
   grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.announcement:not(:first-of-type) {
-  border-top: solid;
-  border-width: 2px;
-  border-color: #1d6d88;;
+.announcement {
+  display: grid;
+  align-content: center;
+  min-height: 100px;
+  padding: 20px;
 }
 
-.announcement {
-  padding: 10px;
+.announcement p {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+
+.announcement h3 {
+  font-size: 12px;
 }
 
 .card-border-left {
@@ -196,7 +199,7 @@ ul {
 .card-content {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 25px;
+  padding: 20px;
 }
 
 .card-icons {
@@ -209,11 +212,11 @@ ul {
 button {
   color: white;
   background-color: #1d6d88;
-  height: 52px;
-  width: 130px;
+  height: 38px;
+  width: 85px;
   border-radius: 50px;
   border-style: none;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -224,27 +227,30 @@ button:hover {
 .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  padding-right: 50px;
 }
 
 input {
-  width: 90%;
+  width: 80%;
+  max-width: 500px;
 
 }
 
 input[type=text] {
-  background-color:#F1F0E8;
+  background-color:white;
   border-style: solid;
   border-color: #1d6d88;
 }
 
 .your-projects {
   margin-bottom: 15px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 input {
   border-radius: 25px;
-  height: 40px;
+  height: 28px;
   padding: 0 20px;
 }
 
@@ -265,9 +271,9 @@ li {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 20px;
-  font-size: 25px;
+  font-size: 20px;
   margin: 15px 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 li:hover {
@@ -275,14 +281,14 @@ li:hover {
 }
 
 .dashboard {
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 40px;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  margin-left: 30px;
-  margin-top: 40px;
-  gap: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  gap: 10px;
   font-weight: 600;
 }
 
@@ -291,32 +297,32 @@ button, li span, .card-icons img, .header img, .header h3 {
 }
 
 .name {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .card h3 {
-  font-size: 25px;
-  margin-bottom: 10px;
-}
-
-.card p {
   font-size: 18px;
 }
 
+.card p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
 ul {
-  margin-left: 45px;
+  margin-left: 40px;
 }
 
 .avatar img {
- height: 100px;
- width: auto;
+ height: 70px;
+ width: 70px;
  border-radius: 50%;
  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .avatar-small img {
-  height: 65px;
-  width: 65px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
   border-style: solid;
   border-color: #1d6d88;
@@ -326,9 +332,9 @@ ul {
 
 
 .search img {
-  height: 35px;
-  width: 35px;
-  margin-right: 20px;
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
 }
 
 
@@ -339,25 +345,30 @@ ul {
 }
 
 #alert {
-  height: 35px;
+  height: 25px;
 }
 
 .card-icons img {
-  height: 30px;
+  height: 20px;
+  width: 20px;
 }
 
 .member {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  place-items: center;
-
+  grid-template-columns: 60px 1fr;
+  align-items: center;
 }
 
 .member-info {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  font-size: 18px;
+  font-size: 13px;
   justify-self: left;
-  padding-left: 5px;
+}
 
+hr {
+  border: 0;
+  height: 2px;
+  background: #1d6d88;
+  margin: 0 20px 0 20px;
 }
