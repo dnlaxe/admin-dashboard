@@ -46,7 +46,6 @@
     isolation: isolate;
   }
 
-
 body {
     font-family: "IBM Plex Sans", serif;
     display: grid;
@@ -56,7 +55,7 @@ body {
         "sidebar header"
         "sidebar main";
     height: 100vh;
-    zoom: 0.85;
+    zoom:0.9;
 }
 
 .sidebar {
@@ -71,9 +70,11 @@ body {
     grid-area: header;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     border-bottom: solid;
     border-color: #1d6d88;
     border-width: 2px;
+    border-radius: 0 0 50px 50px;
 }
 
 .main {
@@ -82,17 +83,16 @@ body {
     grid-template-columns: 1fr 400px;
     grid-template-areas:
         "main-content right-sidebar";
-    background-color: #ebe9e9;
 }
 
 .main-content {
   grid-area: main-content;
-  padding: 30px 30px 30px;
+  padding: 20px 30px 30px;
 }
 
 .right-sidebar {
   grid-area: right-sidebar;
-  padding: 30px 0 0 0;
+  padding: 20px 0 0 0;
 }
 
 .card-container {
@@ -111,13 +111,7 @@ ul {
     border-radius: 10px;
     display: grid;
     grid-template-columns: 16px 1fr;
-
-    background-color: white;
-}
-
-.card:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .side-card-announcements {
@@ -127,7 +121,6 @@ ul {
     padding: 20px 20px;
     margin-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: white;
 }
 
 .side-card-trending {
@@ -136,7 +129,6 @@ ul {
   border-radius: 10px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: white;
 }
 
 .header-top {
@@ -240,7 +232,7 @@ input {
 }
 
 input[type=text] {
-  background-color:#ebe9e9;
+  background-color:#F1F0E8;
   border-style: solid;
   border-color: #1d6d88;
 }
